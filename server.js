@@ -1,11 +1,11 @@
 const Hapi  = require('hapi');
 const good = require('good');
-var port1= process.env.PORT;
+var port1= ~~process.env.PORT;
 // create a server with a host and port
 const server = new Hapi.Server();
 server.connection({
     host: 'localhost',
-    port: port1,
+    port: port1 ||8000,
     routes: { cors: true } 
 });
 
