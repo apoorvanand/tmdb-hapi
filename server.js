@@ -5,7 +5,7 @@ const good = require('good');
 const server = new Hapi.Server();
 server.connection({
     host: 'localhost',
-    port: process.argv[2] || 8000,
+    port: process.env.PORT || 8000,
     routes: { cors: true } 
 });
 
