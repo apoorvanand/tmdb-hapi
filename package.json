@@ -1,17 +1,28 @@
 {
-  "name": "hello-hapi",
+  "name": "artist-search",
   "version": "1.0.0",
-  "description": "",
+  "description": "hapi muxicmatch api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "apoorv",
   "license": "ISC",
   "dependencies": {
     "good": "^7.3.0",
     "good-console": "^6.4.0",
-    "hapi": "^16.6.2"
-  }
+    "hapi": "^16.6.2",
+    "musicmatch": "^0.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apoorvanand/mock-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apoorvanand/mock-server/issues"
+  },
+  "homepage": "https://github.com/apoorvanand/mock-server#readme"
 }
