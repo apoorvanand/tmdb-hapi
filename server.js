@@ -4,7 +4,7 @@ const good = require('good');
 // create a server with a host and port
 const server = new Hapi.Server();
 server.connection({
-    host: process.env.HOST,
+    host: 'localhost',
     port: process.env.PORT;
     routes: { cors: true } 
 });
