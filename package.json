@@ -14,7 +14,8 @@
     "good": "^7.3.0",
     "good-console": "^6.4.0",
     "hapi": "^16.6.2",
-    "musicmatch": "^0.3.2"
+    "musicmatch": "^0.3.2",
+    "unirest": "^0.5.1"
   },
   "devDependencies": {},
   "repository": {
