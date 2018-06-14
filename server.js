@@ -11,11 +11,22 @@ server.connection({
     port: port1 ||8000,
     routes: { cors: true } 
 });
-
 // Add the route
 server.route({
     method: 'GET',
     path: '/',
+    config: {
+        cors: {
+            origin: ['*'],
+            additionalHeaders: ['cache-control', 'x-requested-with']
+        }},
+    handler: (request, reply) => {
+return reply("<h1>welcome to Movie Database Routes available are /popular, /new, /nowplaying, /toprated,/upcoming </h1> ")
+ } });
+        // Add the route
+server.route({
+    method: 'GET',
+    path: '/popular',
     config: {
         cors: {
             origin: ['*'],
