@@ -4,7 +4,7 @@
   "description": "hapi muxicmatch api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jshint server.js",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,12 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "good": "^7.3.0",
-    "good-console": "^6.4.0",
+    "good-console": "^7.1.0",
     "hapi": "^16.6.2",
     "musicmatch": "^0.3.2",
     "unirest": "^0.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apoorvanand/mock-server.git"

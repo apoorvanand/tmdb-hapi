@@ -21,7 +21,7 @@ server.route({
             additionalHeaders: ['cache-control', 'x-requested-with']
         }},
     handler: (request, reply) => {
-return reply("<h1>welcome to Movie Database Routes available are /popular, /new, /nowplaying, /toprated,/upcoming </h1> ")
+return reply("<h1>welcome to Movie Database Routes available are /popular, /new, /nowplaying, /toprated,/upcoming </h1> ");
  } });
         // Add the route
 server.route({
@@ -106,7 +106,7 @@ server.route({
           if (res.error) throw new Error(res.error);
         
           console.log(res.body);
-          return reply(res.body)
+          return reply(res.body);
         });
 }});
 // Add the route
@@ -161,6 +161,37 @@ server.route({
         
           console.log(res.body);
   return reply(res.body);
+});
+}});
+// Add the route
+server.route({
+    method: 'GET',
+    path: '/discovertv',
+    config: {
+        cors: {
+            origin: ['*'],
+            additionalHeaders: ['cache-control', 'x-requested-with']
+        }},
+    handler: (request, reply) => {
+       var req = unirest("GET", "https://api.themoviedb.org/3/discover/tv");
+
+req.query({
+  "include_null_first_air_dates": "false",
+  "timezone": "America/New_York",
+  "page": "1",
+  "sort_by": "popularity.desc",
+  "language": "en-US",
+  "api_key": "f25cbbe44a5bb2e9f210c7a37901a845"
+});
+
+  req.send("{}");
+
+req.end(function (res) {
+  if (res.error) throw new Error(res.error);
+
+  console.log(res.body);
+   return reply(res.body);
+
 });
 }});
 // set up logging
