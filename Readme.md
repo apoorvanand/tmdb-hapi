@@ -3,8 +3,7 @@
  Hapi.js wrapper for TMDB api 
  
  # Endpoints
- '''
-path: '/popular'          
+ ''' path: '/popular'          
  var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
 
 
