@@ -1,6 +1,8 @@
-#TITLE live on
- https://artist-search-bruipqztab.now.sh
- Path : 
+[![Build Status](https://travis-ci.com/apoorvanand/tmdb-hapi.svg?branch=master)](https://travis-ci.com/apoorvanand/tmdb-hapi)
+
+ Hapi.js wrapper for TMDB api 
+ #Endpoints
+ 
  /popular            var req = unirest("GET", "https://api.themoviedb.org/3/movie/popular");
 
 
