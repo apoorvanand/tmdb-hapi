@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jshint server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [],
   "author": "apoorv",
@@ -15,7 +17,8 @@
     "good-console": "^7.1.0",
     "hapi": "^16.6.2",
     "musicmatch": "^0.3.2",
-    "unirest": "^0.5.1"
+    "unirest": "^0.6.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "jshint": "^2.9.5"
@@ -27,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/apoorvanand/mock-server/issues"
   },
-  "homepage": "https://github.com/apoorvanand/mock-server#readme"
+  "homepage": "https://github.com/apoorvanand/mock-server#readme",
+  "snyk": true
 }
